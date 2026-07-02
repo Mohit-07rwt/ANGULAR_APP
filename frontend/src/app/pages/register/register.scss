@@ -1,0 +1,130 @@
+@use '../../shared/style/auth';
+
+
+// *{
+//     margin:0;
+//     padding:0;
+//     box-sizing:border-box;
+//     font-family:'Segoe UI',sans-serif;
+// }
+
+// .register-page{
+
+//     width:100%;
+//     min-height:100vh;
+
+//     display:flex;
+//     justify-content:center;
+//     align-items:center;
+
+//     background:linear-gradient(135deg,#667eea,#764ba2);
+
+//     padding:30px;
+// }
+
+// .register-card{
+
+//     width:450px;
+
+//     background:white;
+
+//     border-radius:15px;
+
+//     padding:35px;
+
+//     box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+// }
+
+// h1{
+
+//     text-align:center;
+//     margin-bottom:10px;
+
+// }
+
+// .subtitle{
+
+//     text-align:center;
+//     color:gray;
+//     margin-bottom:25px;
+
+// }
+
+// .form-group{
+
+//     margin-bottom:18px;
+
+// }
+
+// label{
+
+//     display:block;
+//     margin-bottom:8px;
+//     font-weight:600;
+
+// }
+
+// input{
+
+//     width:100%;
+//     padding:12px;
+
+//     border:1px solid #ccc;
+
+//     border-radius:8px;
+
+//     outline:none;
+
+// }
+
+// input:focus{
+
+//     border-color:#667eea;
+
+// }
+
+// button{
+
+//     width:100%;
+
+//     padding:14px;
+
+//     border:none;
+
+//     background:#667eea;
+
+//     color:white;
+
+//     border-radius:8px;
+
+//     cursor:pointer;
+
+//     font-size:16px;
+
+// }
+
+// button:disabled{
+
+//     background:#b5b5b5;
+//     cursor:not-allowed;
+
+// }
+
+// .login-link{
+
+//     text-align:center;
+
+//     margin-top:20px;
+
+// }
+
+// .login-link a{
+
+//     color:#667eea;
+
+//     text-decoration:none;
+
+//     font-weight:bold;
+
+// }
