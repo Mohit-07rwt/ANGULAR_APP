@@ -60,19 +60,56 @@
       @if (errorMsg) {
         <p class="api-error">{{ errorMsg }}</p>
       }
-
-      <!-- LOGIN BUTTON -->
       <button
-        type="submit"
-        [disabled]="loginForm.invalid || isLoading">
+          type="submit"
+          class="login-btn"
+          [disabled]="loginForm.invalid || isLoading">
 
-        @if (!isLoading) {
-          Login
-        } @else {
-          Logging in...
-        }
+          <ng-container *ngIf="!isLoading; else loading">
+            <span>Login</span>
+          </ng-container>
 
+          <ng-template #loading>
+            <mat-spinner diameter="22"></mat-spinner>
+            <span>Logging in...</span>
+          </ng-template>
       </button>
+
+
+<!-- CAPTCHA SECTION -->
+      <div class="captcha-container">
+        <!-- CAPTCHA IMAGE -->
+        <div>
+          <img [src]="captchaImage" alt="captcha" style="height: 60px;" />
+        </div>
+
+        <!-- REFRESH BUTTON -->
+        <div>
+          <button type="button" (click)="loadCaptcha()">
+            Refresh Captcha
+          </button>
+        </div>
+
+      </div>
+
+      <!-- CAPTCHA INPUT -->
+      <div class="form-group">
+        <label>Enter CAPTCHA</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="captchaText"
+          placeholder="Enter captcha"
+        />
+
+        @if (loginForm.get('captchaText')?.touched && loginForm.get('captchaText')?.invalid) {
+          <small class="error">
+            @if (loginForm.get('captchaText')?.errors?.['required']) {
+              Captcha is required.
+            }
+          </small>
+        }
+      </div>
 
     </form>
 
@@ -81,7 +118,5 @@
       Don't have an account?
       <a routerLink="/register">Register</a>
     </p>
-
   </div>
-
 </div>

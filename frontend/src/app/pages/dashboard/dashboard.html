@@ -1,37 +1,167 @@
-<div class="dashboard-container">
-
+<!-- <div class="dashboard">
     <header class="header">
-
         <h2>Auth Application</h2>
 
         <button routerLink="/login">
             Logout
         </button>
-
     </header>
+
 
     <div class="main-container">
 
-        <aside class="sidebar">
+        <aside class="sidebar" [class.collapsed]="isSidebarCollapsed">
+            <button class="toggle-btn" (click)="toggleSidebar()">
+                <mat-icon>
+                        {{ isSidebarCollapsed ? 'chevron_right' : 'chevron_left' }}
+                </mat-icon>
+            </button>
+            <ul>
+                <li>
+                    <mat-icon>dashboard</mat-icon>
+                    <span class="menu-text">
+                        Dashboard
+                    </span>
+                </li>
+
+                <li>
+                    <mat-icon>person</mat-icon>
+                    <span class="menu-text">
+                        Profile
+                    </span>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <h1>Welcome to Dashboard</h1> -->
+             <!-- <h1>Welcome {{ username }}</h1>
+            <p>Dashboard is empty for now.</p>
+        </main>
+
+    </div>
+
+</div> -->
+
+<div class="dashboard">
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <h2>Auth Application</h2>
+        </div>
+
+        <div class="header-title">
+            Student Dashboard
+        </div>
+
+        <div class="header-right">
+            <span>Welcome, {{ username }}</span>
+
+            <button routerLink="/login">
+                Logout
+            </button>
+        </div>
+
+    </header>
+
+    <!-- Main Layout -->
+
+    <div class="main-container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar"
+               [class.collapsed]="isSidebarCollapsed">
+
+            <button class="toggle-btn"
+                    (click)="toggleSidebar()">
+
+                <mat-icon>
+                    {{ isSidebarCollapsed ? 'chevron_right' : 'chevron_left' }}
+                </mat-icon>
+
+            </button>
 
             <ul>
 
-                <li>Dashboard</li>
-                <li>Profile</li>
-                <li>Settings</li>
+                <li class="active">
+                    <mat-icon>dashboard</mat-icon>
+                    <span class="menu-text">Dashboard</span>
+                </li>
+
+                <li>
+                    <mat-icon>person</mat-icon>
+                    <span class="menu-text">Academic Profile</span>
+                </li>
+
+                <li>
+                    <mat-icon>school</mat-icon>
+                    <span class="menu-text">Placement Profile</span>
+                </li>
+
+                <li>
+                    <mat-icon>assignment</mat-icon>
+                    <span class="menu-text">Test Schedule</span>
+                </li>
+
+                <li>
+                    <mat-icon>grading</mat-icon>
+                    <span class="menu-text">Test Marks</span>
+                </li>
+
+                <li>
+                    <mat-icon>folder</mat-icon>
+                    <span class="menu-text">Projects</span>
+                </li>
+
+                <li>
+                    <mat-icon>quiz</mat-icon>
+                    <span class="menu-text">Quiz</span>
+                </li>
+
+                <li>
+                    <mat-icon>event_available</mat-icon>
+                    <span class="menu-text">Attendance</span>
+                </li>
+
+                <li>
+                    <mat-icon>business</mat-icon>
+                    <span class="menu-text">Campus Drive</span>
+                </li>
+
+                <li>
+                    <mat-icon>notifications</mat-icon>
+                    <span class="menu-text">Notifications</span>
+                </li>
+
+                <li>
+                    <mat-icon>settings</mat-icon>
+                    <span class="menu-text">Settings</span>
+                </li>
 
             </ul>
 
         </aside>
 
+        <!-- Main Content -->
+
         <main class="content">
 
-            <h1>Welcome to Dashboard</h1>
-
-            <p>Dashboard is empty for now.</p>
+            <!-- Cards will come here in next step -->
 
         </main>
 
     </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        © 2026 Auth Application
+
+    </footer>
 
 </div>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-register', // change to app-dashboard in dashboard.ts
+  selector: 'app-dashboard', // change to app-dashboard in dashboard.ts
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './dashboard.html', // change to dashboard.html in dashboard.ts

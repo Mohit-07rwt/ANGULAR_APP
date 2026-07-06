@@ -34,4 +34,10 @@ export class AuthService {
   isLoggedIn(): boolean {
     return !!this.storage.getToken();
   }
+
+
+  //captcha
+  getCaptcha(){
+  return this.http.get('http://localhost:5173/api/Captcha');
+  }
 }
